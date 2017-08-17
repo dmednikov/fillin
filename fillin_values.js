@@ -1,3 +1,6 @@
+var button = document.getElementsByClassName("a-btn--disabled-alt")[0];
+button.classList.remove("a-btn--disabled-alt");
+
 var splits = membershipNumberAndPostalCode.split("  ");
 
 var cardNumber = splits[0];

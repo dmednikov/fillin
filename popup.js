@@ -11,16 +11,17 @@ function click(membershipNumberAndPostalCodeString) {
         file: "/fillin_values.js"
       });
 
-  window.close();
+  //window.close();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   var buttons = document.querySelectorAll('button');
 
-  for (var i = 1; i <= buttons.length; i++) {
-    let content = document.getElementById("c_"+i).innerHTML;
+  for (var i = 0; i < buttons.length; i++) {
+    let button_id = buttons[i].id;
+    let content = document.getElementById("c_" + button_id).innerHTML;
 
-    buttons[i-1].addEventListener('click', function () {
+    buttons[i].addEventListener('click', function () {
       click(content);
     });
   }

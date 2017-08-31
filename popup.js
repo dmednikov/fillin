@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var buttons = document.querySelectorAll('button');
 
   for (var i = 1; i <= buttons.length; i++) {
-    let content = document.getElementById("c_"+i).placeholder;
+    let content = document.getElementById("c_"+i).innerHTML;
+
     buttons[i-1].addEventListener('click', function () {
       click(content);
     });
